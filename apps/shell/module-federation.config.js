@@ -11,5 +11,9 @@ module.exports = {
     'faq',
     'about',
     'contact',
+    'notifications',
+    'settings',
+    ,
+    'messages',
   ],
 };

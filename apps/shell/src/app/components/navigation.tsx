@@ -1,6 +1,6 @@
 import { Bars3Icon, BellIcon, XMarkIcon } from '@heroicons/react/24/outline'
 import { Disclosure, Menu, Transition } from '@headlessui/react'
-import { Fragment, FunctionComponent } from 'react'
+import {Fragment, FunctionComponent, useEffect, useState} from 'react'
 
 import { useNavigate } from 'react-router-dom'
 
@@ -20,7 +20,8 @@ function classNames(...classes: string[]) {
 
 const NavBar: FunctionComponent<NavProp> = ({ navigation }: NavProp) => {
     const navigate = useNavigate();
-    const HandleGoToNotifs = () => navigate('/notification');
+    // const {logged, setLogged} = useState<boolean>(false)
+    const HandleGoToNotifs = () => navigate('/notifications');
     return (
         <Disclosure as="nav" className="bg-gray-800">
             {({ open }) => (

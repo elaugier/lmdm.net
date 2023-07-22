@@ -1,5 +1,11 @@
 import styles from './common.module.scss';
 
+const authentication = {
+  isLogged: (): boolean => {
+    return true;
+  }
+}
+
 /* eslint-disable-next-line */
 export interface CommonProps {}
 

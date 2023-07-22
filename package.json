@@ -3,7 +3,7 @@
   "version": "0.0.0",
   "license": "MIT",
   "scripts": {
-    "dev": "npx nx serve shell --devRemotes read,write,contribute,moderate,manage,profile,members,faq,about,contact"
+    "dev": "npx nx serve shell --devRemotes read,write,contribute,moderate,manage,profile,members,faq,about,contact,notifications,settings,messages"
   },
   "private": true,
   "devDependencies": {

@@ -11,3 +11,9 @@ declare module 'members/Module';
 declare module 'faq/Module';
 declare module 'about/Module';
 declare module 'contact/Module';
+
+declare module 'notifications/Module';
+
+declare module 'settings/Module';
+
+declare module 'messages/Module';

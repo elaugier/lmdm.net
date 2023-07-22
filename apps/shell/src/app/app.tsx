@@ -4,6 +4,14 @@ import { Link, Route, Routes } from 'react-router-dom';
 import NavBar, { NavItem } from './components/navigation';
 
 import Welcome from './components/welcome';
+import Footer from './components/footer';
+import Oops from './components/oops';
+
+const Messages = React.lazy(() => import('messages/Module'));
+
+const Settings = React.lazy(() => import('settings/Module'));
+
+const Notifications = React.lazy(() => import('notifications/Module'));
 
 const Read = React.lazy(() => import('read/Module'));
 
@@ -39,35 +47,61 @@ export function App() {
     { name: 'Contactez-nous', href: '/contact', current: false },
   ];
   return (
-
-
     <React.Suspense fallback={null}>
       <NavBar navigation={nav}></NavBar>
+
       <Routes>
-        <Route path="/" element={<Welcome />} />
+        <Route path="/" element={<Welcome />} errorElement={<Oops></Oops>} />
+        <Route path="/messages" element={<Messages />} />
+        <Route path="/settings" element={<Settings />} />
+        <Route path="/notifications" element={<Notifications />} />
 
-        <Route path="/read" element={<Read />} />
+        <Route path="/read" element={<Read />} errorElement={<Oops></Oops>} />
 
-        <Route path="/write" element={<Write />} />
+        <Route path="/write" element={<Write />} errorElement={<Oops></Oops>} />
 
-        <Route path="/contribute" element={<Contribute />} />
+        <Route
+          path="/contribute"
+          element={<Contribute />}
+          errorElement={<Oops></Oops>}
+        />
 
-        <Route path="/moderate" element={<Moderate />} />
+        <Route
+          path="/moderate"
+          element={<Moderate />}
+          errorElement={<Oops></Oops>}
+        />
 
-        <Route path="/manage" element={<Manage />} />
+        <Route
+          path="/manage"
+          element={<Manage />}
+          errorElement={<Oops></Oops>}
+        />
 
-        <Route path="/profile" element={<Profile />} />
+        <Route
+          path="/profile"
+          element={<Profile />}
+          errorElement={<Oops></Oops>}
+        />
 
-        <Route path="/members" element={<Members />} />
+        <Route
+          path="/members"
+          element={<Members />}
+          errorElement={<Oops></Oops>}
+        />
 
-        <Route path="/faq" element={<Faq />} />
+        <Route path="/faq" element={<Faq />} errorElement={<Oops></Oops>} />
 
-        <Route path="/about" element={<About />} />
+        <Route path="/about" element={<About />} errorElement={<Oops></Oops>} />
 
-        <Route path="/contact" element={<Contact />} />
+        <Route
+          path="/contact"
+          element={<Contact />}
+          errorElement={<Oops></Oops>}
+        />
       </Routes>
+      <Footer></Footer>
     </React.Suspense>
-
   );
 }
 
