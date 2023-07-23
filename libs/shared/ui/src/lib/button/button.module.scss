@@ -7,9 +7,13 @@
 */
 
 .button {
-    background-color:  cadetblue;
     min-width: 30vh;
     border-radius: 5px;
+}
+
+.theme-default > .button {
+    background-color:  cadetblue;
+
     &:hover {
         background-color: blueviolet;
     }
