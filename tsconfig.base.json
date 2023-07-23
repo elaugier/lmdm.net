@@ -15,7 +15,8 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
-      "@lmdm.net/common": ["libs/common/src/index.ts"]
+      "@lmdm.net/shared/data-access": ["libs/shared/data-access/src/index.ts"],
+      "@lmdm.net/shared/ui": ["libs/shared/ui/src/index.ts"]
     }
   },
   "exclude": ["node_modules", "tmp"]

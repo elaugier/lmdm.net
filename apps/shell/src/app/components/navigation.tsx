@@ -1,7 +1,8 @@
 import { Bars3Icon, BellIcon, XMarkIcon } from '@heroicons/react/24/outline'
 import { Disclosure, Menu, Transition } from '@headlessui/react'
-import {Fragment, FunctionComponent, useEffect, useState} from 'react'
+import { Fragment, FunctionComponent, useEffect, useState } from 'react'
 
+import { Button } from '@lmdm.net/shared/ui'
 import { useNavigate } from 'react-router-dom'
 
 export interface NavItem {
@@ -66,6 +67,7 @@ const NavBar: FunctionComponent<NavProp> = ({ navigation }: NavProp) => {
                                 </div>
                             </div>
                             <div className="absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0">
+                                <Button displayName='Test' name='test'></Button>
                                 <button
                                     onClick={HandleGoToNotifs}
                                     type="button"
